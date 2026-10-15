@@ -1,1 +1,315 @@
-Hello World!
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jorge Pereira — jpereira</title>
+<meta name="description" content="Open source dev. FreeRADIUS contributor at NetworkRADIUS. Networking, C, security, AI.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230d1117'/><text x='5' y='22' font-family='monospace' font-size='16' fill='%2339ff14'>&gt;_</text></svg>">
+<style>
+:root{--bg:#0a0e0a;--panel:#0d130d;--fg:#c9e6c9;--dim:#6b8f6b;--g:#39ff14;--c:#00e5ff;--line:#1c2b1c}
+:root[data-theme="light"]{--bg:#f4f8f2;--panel:#ffffff;--fg:#1d2b1d;--dim:#5a6f5a;--g:#0a7a1f;--c:#0b6a9a;--line:#d3e0d0;--rainbg:244,248,242;--rainfg:#0a7a1f}
+:root{--rainbg:10,14,10;--rainfg:#39ff14}
+:root[data-theme="light"] .scan{display:none}
+:root[data-theme="light"] #rain{opacity:.1}
+:root[data-theme="light"] .term{background:rgba(255,255,255,.95);box-shadow:0 4px 24px rgba(10,122,31,.1)}
+:root[data-theme="light"] .bar{background:#eaf2e7}
+:root[data-theme="light"] .code{background:#f0f5ee}
+:root[data-theme="light"] .code .s{color:#9a6b00}
+:root[data-theme="light"] h1,:root[data-theme="light"] .cur{text-shadow:none}
+:root[data-theme="light"] .cta a:hover{color:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+#rain{position:fixed;inset:0;z-index:0;opacity:.18;width:100%;height:100%}
+.scan{position:fixed;inset:0;z-index:2;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px)}
+main,header,footer{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:0 20px}
+a{color:var(--c);text-decoration:none}a:hover{text-decoration:underline}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.lang{display:flex;gap:8px;align-items:center}
+.theme{background:var(--panel);color:var(--fg);border:1px solid var(--line);padding:5px 10px;border-radius:6px;cursor:pointer;font:inherit;font-size:13px}
+.lang button{display:flex;align-items:center;gap:6px;background:var(--panel);color:var(--fg);border:1px solid var(--line);
+  padding:5px 10px;border-radius:6px;cursor:pointer;font:inherit;font-size:13px}
+.lang button img{width:20px;height:14px;object-fit:cover;border-radius:2px}
+.lang button.on{border-color:var(--g);color:var(--g);box-shadow:0 0 8px rgba(57,255,20,.3)}
+.term{background:rgba(13,19,13,.92);border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 0 30px rgba(57,255,20,.07)}
+.bar{display:flex;gap:7px;align-items:center;padding:9px 14px;background:#101810;border-bottom:1px solid var(--line);color:var(--dim);font-size:12px}
+.bar i{width:11px;height:11px;border-radius:50%;display:inline-block}
+.bar i:nth-child(1){background:#ff5f56}.bar i:nth-child(2){background:#ffbd2e}.bar i:nth-child(3){background:#27c93f}
+.bar span{margin-left:8px}
+.body{padding:22px}
+.hero{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}
+.hero img.av{width:130px;height:130px;border-radius:50%;border:2px solid var(--g);box-shadow:0 0 22px rgba(57,255,20,.4)}
+h1{margin:0 0 4px;font-size:32px;color:var(--g);text-shadow:0 0 10px rgba(57,255,20,.5);letter-spacing:-.5px}
+.prompt{color:var(--dim)}.prompt b{color:var(--g)}
+.cur{display:inline-block;width:9px;height:1.1em;background:var(--g);vertical-align:text-bottom;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tags span{border:1px solid var(--line);padding:2px 9px;border-radius:99px;font-size:12px;color:var(--c)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.cta a{border:1px solid var(--g);color:var(--g);padding:6px 14px;border-radius:6px;font-size:13px}
+.cta a:hover{background:var(--g);color:#000;text-decoration:none}
+section{margin-top:44px}
+h2{font-size:18px;color:var(--g);margin:0 0 16px}
+h2::before{content:"## ";color:var(--dim)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:8px;transition:.15s}
+.card:hover{border-color:var(--g);box-shadow:0 0 14px rgba(57,255,20,.15);transform:translateY(-2px)}
+.card.feat{border-color:#2a4a2a}
+.card h3{margin:0;font-size:16px}
+.card h3 a{color:var(--fg)}.card h3 a:hover{color:var(--g)}
+.card p{margin:0;color:var(--dim);font-size:13px;flex:1}
+.meta{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--dim);align-items:center}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:4px;background:var(--lc,#888)}
+.badge{font-size:10px;border:1px solid var(--line);border-radius:4px;padding:0 6px;color:var(--dim);margin-left:6px;vertical-align:middle}
+.badge.star{color:var(--g);border-color:var(--g)}
+ul.do{list-style:none;padding:0;margin:0}
+ul.do li::before{content:"$ ";color:var(--g)}
+.code{background:#070a07;border:1px solid var(--line);border-radius:6px;padding:12px;color:var(--dim);font-size:13px;overflow:auto;white-space:pre}
+.code .k{color:var(--c)}.code .s{color:#e6db74}.code .f{color:var(--g)}
+footer{padding:50px 20px 40px;color:var(--dim);font-size:12px;text-align:center}
+.upd{opacity:.7}
+[data-l]{display:none}
+html[lang="en"] [data-l="en"],html[lang="pt"] [data-l="pt"]{display:revert}
+@media(max-width:600px){.hero{grid-template-columns:1fr;text-align:center}.hero img.av{margin:auto}.tags,.cta{justify-content:center}}
+@media(prefers-reduced-motion:reduce){.cur{animation:none}}
+</style>
+</head>
+<body>
+<canvas id="rain" aria-hidden="true"></canvas><div class="scan"></div>
+
+<header>
+<nav>
+  <div class="prompt"><b>jpereira</b>@github:~$</div>
+  <div class="lang" role="group" aria-label="Language">
+    <button data-set="en" class="on"><img src="https://flagcdn.com/w40/us.png" alt="">EN</button>
+    <button data-set="pt"><img src="https://flagcdn.com/w40/br.png" alt="">PT</button>
+    <button class="theme" id="theme" aria-label="Toggle theme" title="Toggle theme">◐</button>
+  </div>
+</nav>
+</header>
+
+<main>
+<div class="term">
+  <div class="bar"><i></i><i></i><i></i><span>~/jpereira — zsh</span></div>
+  <div class="body">
+    <div class="hero">
+      <img class="av" src="https://github.com/jpereira.png?size=260" alt="Jorge Pereira">
+      <div>
+        <h1>Jorge Pereira</h1>
+        <div class="prompt"><b>$</b> whoami<br>
+          <span data-l="en">Open source dev @ <a href="https://networkradius.com/">NetworkRADIUS</a> ·
+            <a href="https://github.com/FreeRADIUS/">FreeRADIUS</a> contributor · also into AI.</span>
+          <span data-l="pt">Dev open source @ <a href="https://networkradius.com/">NetworkRADIUS</a> ·
+            contribuidor do <a href="https://github.com/FreeRADIUS/">FreeRADIUS</a> · e também com IA.</span>
+          <span class="cur"></span>
+        </div>
+        <div class="tags"><span>C</span><span>RADIUS</span><span>DHCP</span><span>GRE</span><span>802.1X/EAP</span><span>AI / LLMs</span><span>security</span><span>blockchain</span></div>
+        <div class="cta">
+          <a href="https://github.com/jpereira">GitHub</a>
+          <a href="https://github.com/FreeRADIUS/freeradius-server/commits?author=jpereira">FreeRADIUS commits</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <h2 data-l="en">what I do</h2><h2 data-l="pt">o que eu faço</h2>
+  <ul class="do" data-l="en">
+    <li>Networking and protocols: RADIUS, DHCP, GRE, 802.1X/EAP</li>
+    <li>C libraries and modules (nginx, Apache, kqueue, parsers)</li>
+    <li>Security: SQL injection detection, authentication</li>
+    <li>Automation, bots and personal tools (Node.js, PHP, Python, Shell)</li>
+    <li>AI: LLMs, AI agents and AI-assisted dev workflows (Claude Code, prompts, automation)</li>
+    <li>Off-keyboard: climbing 🧗, downhill MTB 🚵, lifting 🏋️ — from Rio de Janeiro 🇧🇷</li>
+  </ul>
+  <ul class="do" data-l="pt">
+    <li>Redes e protocolos: RADIUS, DHCP, GRE, 802.1X/EAP</li>
+    <li>Libs e módulos em C (nginx, Apache, kqueue, parsers)</li>
+    <li>Segurança: detecção de SQL injection, autenticação</li>
+    <li>Automação, bots e ferramentas pessoais (Node.js, PHP, Python, Shell)</li>
+    <li>IA: LLMs, agentes de IA e fluxos de dev assistidos por IA (Claude Code, prompts, automação)</li>
+    <li>Fora do teclado: escalada 🧗, downhill 🚵, musculação 🏋️ — direto do Rio de Janeiro 🇧🇷</li>
+  </ul>
+</section>
+
+<section>
+  <h2 data-l="en">projects</h2><h2 data-l="pt">projetos</h2>
+  <div class="grid">
+<!-- PROJECTS:START -->
+    <div class="card feat">
+      <h3><a href="https://github.com/jpereira/softgre">softgre</a><span class="badge star">featured</span></h3>
+      <p>🌐 Dynamic GRE Encapsulation, (a.k.a SoftGRE)</p>
+      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 6</span><span>⑂ 9</span></div>
+    </div>
+    <div class="card feat">
+      <h3><a href="https://github.com/jpereira/getright">getright</a><span class="badge star">featured</span></h3>
+      <p>📥 The classic GetRight download manager, straight from the good old Windows days and brought into the modern era! Just for fun!</p>
+      <div class="meta"><span><i class="dot" style="--lc:#f34b7d"></i>C++</span><span>★ 2</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/php-dhcpdleases">php-dhcpdleases</a></h3>
+      <p>this a class used to process the fields of dhcpd.leases from ISC-DHCP</p>
+      <div class="meta"><span><i class="dot" style="--lc:#4F5D95"></i>PHP</span><span>★ 6</span><span>⑂ 2</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/nginx-backtrace-ng">nginx-backtrace-ng</a></h3>
+      <p>A Nginx module to dump backtrace when a worker process exits abnormally</p>
+      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 3</span><span>⑂ 6</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/ansible-tools">ansible-tools</a></h3>
+      <p>Convert the ansible host inventory to yAML format</p>
+      <div class="meta"><span><i class="dot" style="--lc:#3572A5"></i>Python</span><span>★ 3</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/zapbot">zapbot</a></h3>
+      <p>🤖 Bot para WhatsApp escrito em Node.js que roda em cima de uma sessão real do WhatsApp Web</p>
+      <div class="meta"><span><i class="dot" style="--lc:#f1e05a"></i>JavaScript</span><span>★ 2</span><span>⑂ 2</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/dotfiles">dotfiles</a></h3>
+      <p>🛠️ My such .dot settings base for my 🐧Linux and Mac stations!</p>
+      <div class="meta"><span><i class="dot" style="--lc:#199f4b"></i>Vim Script</span><span>★ 2</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/isc-dhp-relay">isc-dhp-relay</a></h3>
+      <p>this is upstream of &quot;dhcp-4.3.1/relay&quot; from &quot;ftp://ftp.isc.org/isc/dhcp/4.3.1/dhcp-4.3.1.tar.gz&quot; with support for dhcp option82 using circuit_id/remote_id</p>
+      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 2</span><span>⑂ 3</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/hostapd">hostapd</a></h3>
+      <p>hostapd: IEEE 802.11 AP, IEEE 802.1X/WPA/WPA2/EAP/RADIUS Authenticator (fork from http://w1.fi/hostap.git)</p>
+      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 1</span><span>⑂ 3</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/closedcaption-parser">closedcaption-parser</a></h3>
+      <p>🔌 Biblioteca em C para extrair o closed caption (legenda oculta) do padrão ISDB-Tb/SBTVD (ARIB STD-B24 / ABNT NBR 15606-1) a partir dos pacotes PES de legenda de um MPEG-TS</p>
+      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 0</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/freeradius-tls-openssl">freeradius-tls-openssl</a></h3>
+      <p></p>
+      <div class="meta"><span><i class="dot" style="--lc:#888"></i>Logos</span><span>★ 0</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/hostap-eap-fast">hostap-eap-fast</a></h3>
+      <p>Dockerfile sample describing the issue in EAP-FAST Hostap/HEAD &amp; Radius/v3.0.x</p>
+      <div class="meta"><span><i class="dot" style="--lc:#888"></i>Dockerfile</span><span>★ 0</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/libsed">libsed</a></h3>
+      <p>The SED library based (stolen) from https://github.com/apache/httpd/tree/2.4.x/modules/filters/*sed*</p>
+      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 0</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/freeradius-server">freeradius-server</a><span class="badge">fork</span></h3>
+      <p>The FreeRADIUS Server.  RADIUS, DHCP, and VMPS.</p>
+      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 2</span><span>⑂ 1</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/pam_radius">pam_radius</a><span class="badge">fork</span></h3>
+      <p>This is the PAM to RADIUS authentication module.  It allows any Linux, OSX or Solaris machine to become a RADIUS client for authentication and password change requests.</p>
+      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 1</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/BitcoinChecker">BitcoinChecker</a><span class="badge">fork</span></h3>
+      <p>DataModule for Bitcoin Checker android app</p>
+      <div class="meta"><span><i class="dot" style="--lc:#A97BFF"></i>Kotlin</span><span>★ 1</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/libinjection">libinjection</a><span class="badge">fork</span></h3>
+      <p>SQL / SQLI tokenizer parser analyzer</p>
+      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 0</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/freeradius-client">freeradius-client</a><span class="badge">fork</span></h3>
+      <p>A BSD licenced RADIUS client library</p>
+      <div class="meta"><span><i class="dot" style="--lc:#89e051"></i>Shell</span><span>★ 0</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/daloradius">daloradius</a><span class="badge">fork</span></h3>
+      <p>daloRADIUS is an advanced RADIUS web management application aimed at managing hotspots and general-purpose ISP deployments. It features user management, graphical reporting, accounting, a billing engine and integrates with GoogleMaps for geo-locating.</p>
+      <div class="meta"><span>★ 0</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/BlinkTradeJS">BlinkTradeJS</a><span class="badge">fork</span></h3>
+      <p>BlinkTrade JavaScript SDK and CLI</p>
+      <div class="meta"><span>★ 0</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/libcouchbase">libcouchbase</a><span class="badge">fork</span></h3>
+      <p>The couchbase client for C.</p>
+      <div class="meta"><span>★ 0</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/libkqueue">libkqueue</a><span class="badge">fork</span></h3>
+      <p>kqueue(2) compatibility library</p>
+      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 0</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/radsecproxy">radsecproxy</a><span class="badge">fork</span></h3>
+      <p>radsecproxy is a generic RADIUS proxy that supports both UDP and TLS (RadSec) RADIUS transports.</p>
+      <div class="meta"><span>★ 0</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/jpereira/luarcu">luarcu</a><span class="badge">fork</span></h3>
+      <p>RCU binding for Lunatik</p>
+      <div class="meta"><span>★ 0</span><span>⑂ 0</span></div>
+    </div>
+<!-- PROJECTS:END -->
+  </div>
+  <p class="upd"><small><span data-l="en">auto-updated from the GitHub API</span><span data-l="pt">atualizado automaticamente via API do GitHub</span> · <!-- UPDATED -->2026-10-15<!-- /UPDATED --></small></p>
+</section>
+
+<section>
+  <h2>~/.signature</h2>
+<div class="code"><span class="k">while</span> (<span class="f">packet</span> = <span class="f">recv</span>(sock)) {
+    <span class="k">if</span> (!<span class="f">authenticate</span>(packet)) <span class="k">continue</span>;  <span class="s">// trust nothing</span>
+    <span class="f">reply</span>(sock, <span class="s">"Access-Accept"</span>);
+}</div>
+</section>
+</main>
+
+<footer>
+  <span data-l="en">Built with plain HTML, no frameworks. Source on</span>
+  <span data-l="pt">Feito com HTML puro, sem frameworks. Código no</span>
+  <a href="https://github.com/jpereira/jpereira.github.io">GitHub</a>
+</footer>
+
+<script>
+// theme
+(function(){
+  var h=document.documentElement,t;
+  try{t=localStorage.getItem('theme')}catch(e){}
+  if(t!=='light')t='dark';
+  h.dataset.theme=t;
+  document.getElementById('theme').onclick=function(){
+    t=h.dataset.theme==='light'?'dark':'light';h.dataset.theme=t;
+    try{localStorage.setItem('theme',t)}catch(e){}};
+})();
+// language
+(function(){
+  var h=document.documentElement,s;
+  try{s=localStorage.getItem('lang')}catch(e){}
+  var l=s==='pt'?'pt':'en';
+  function set(x){h.lang=x;document.querySelectorAll('.lang button[data-set]').forEach(function(b){b.classList.toggle('on',b.dataset.set===x)});
+    try{localStorage.setItem('lang',x)}catch(e){}}
+  document.querySelectorAll('.lang button[data-set]').forEach(function(b){b.onclick=function(){set(b.dataset.set)}});
+  set(l);
+})();
+// matrix rain
+(function(){
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  var c=document.getElementById('rain'),x=c.getContext('2d'),cols,drops,fs=16;
+  var ch='01{}[]<>/\\;$#@%&*+=~ABCDEF'.split('');
+  function init(){c.width=innerWidth;c.height=innerHeight;cols=Math.ceil(c.width/fs);drops=Array(cols).fill(0).map(function(){return Math.random()*-50})}
+  function draw(){var cs=getComputedStyle(document.documentElement);x.fillStyle='rgba('+cs.getPropertyValue('--rainbg')+',.08)';x.fillRect(0,0,c.width,c.height);x.fillStyle=cs.getPropertyValue('--rainfg');x.font=fs+'px monospace';
+    for(var i=0;i<cols;i++){x.fillText(ch[Math.random()*ch.length|0],i*fs,drops[i]*fs);
+      if(drops[i]*fs>c.height&&Math.random()>.975)drops[i]=0;drops[i]++}}
+  init();addEventListener('resize',init);setInterval(draw,60);
+})();
+</script>
+</body>
+</html>
