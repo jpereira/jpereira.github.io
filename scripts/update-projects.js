@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 
 const USER = 'jpereira';
-const FEATURED = ['softgre', 'getright', 'closedcaption-parser'];
+const FEATURED = ['softgre', 'zapbot', 'getright', 'libclosedcaption', 'php-dhcpdleases', 'freeradius-server'];
 const MAX = 24;
 const EXCLUDE = ['freeradius-tls-openssl', 'libcouchbase', 'ansible-tools', 'libsed', 'daloradius', 'source', 'acutest'];
 const EXCLUDE_PARENT_OWNERS = ['blinktrade']; // forks de..., ignorados
@@ -53,10 +53,10 @@ async function main() {
       ? `<span><i class="dot" style="--lc:${COLORS[r.language] || '#888'}"></i>${esc(r.language)}</span>` : '';
     // ícones (site + repo) só para projetos com website (GitHub Pages)
     const links = r.has_pages
-      ? `<span class="ico"><a href="https://${USER}.github.io/${esc(r.name)}/" title="Website" aria-label="Website">${ICON_WEB}</a>`
-        + `<a href="${esc(r.html_url)}" title="GitHub repo" aria-label="GitHub repo">${ICON_GH}</a></span>` : '';
+      ? `<span class="ico"><a target="_blank" rel="noopener noreferrer" href="https://${USER}.github.io/${esc(r.name)}/" title="Website" aria-label="Website">${ICON_WEB}</a>`
+        + `<a target="_blank" rel="noopener noreferrer" href="${esc(r.html_url)}" title="GitHub repo" aria-label="GitHub repo">${ICON_GH}</a></span>` : '';
     return `    <div class="card${feat ? ' feat' : ''}">
-      <h3><a href="${esc(r.html_url)}">${esc(r.name)}</a>${feat ? '<span class="badge star">featured</span>' : ''}${r.fork ? '<span class="badge">fork</span>' : ''}</h3>
+      <h3><a target="_blank" rel="noopener noreferrer" href="${esc(r.html_url)}">${esc(r.name)}</a>${feat ? '<span class="badge star">featured</span>' : ''}${r.fork ? '<span class="badge">fork</span>' : ''}</h3>
       <p>${esc(r.description || '')}</p>
       <div class="meta">${lang}<span>★ ${r.stargazers_count}</span><span>⑂ ${r.forks_count}</span>${links}</div>
     </div>`;

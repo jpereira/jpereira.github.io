@@ -4,7 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jorge Pereira — jpereira</title>
-<meta name="description" content="Open source dev. FreeRADIUS contributor at NetworkRADIUS. Networking, C, security, AI.">
+<meta name="description" content="Senior technologist, 25+ years: Linux embedded, networking (RADIUS), Digital TV, DevOps, security and AI. FreeRADIUS contributor.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jorge Pereira — jpereira">
+<meta property="og:description" content="Senior technologist: Linux embedded, networking (RADIUS), Digital TV, DevOps and AI.">
+<meta property="og:url" content="https://jpereira.github.io/">
+<meta property="og:image" content="https://github.com/jpereira.png?size=400">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://jpereira.github.io/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230d1117'/><text x='5' y='22' font-family='monospace' font-size='16' fill='%2339ff14'>&gt;_</text></svg>">
 <style>
 :root{--bg:#0a0e0a;--panel:#0d130d;--fg:#c9e6c9;--dim:#6b8f6b;--g:#39ff14;--c:#00e5ff;--line:#1c2b1c}
@@ -66,6 +73,10 @@ h2::before{content:"## ";color:var(--dim)}
 .badge.star{color:var(--g);border-color:var(--g)}
 ul.do{list-style:none;padding:0;margin:0}
 ul.do li::before{content:"$ ";color:var(--g)}
+.sub{color:var(--fg);margin:2px 0 8px;font-size:14px}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.links a{border:1px solid var(--line);padding:6px 14px;border-radius:6px;font-size:13px;background:var(--panel)}
+.links a:hover{border-color:var(--g);text-decoration:none}
 .code{background:#070a07;border:1px solid var(--line);border-radius:6px;padding:12px;color:var(--dim);font-size:13px;overflow:auto;white-space:pre}
 .code .k{color:var(--c)}.code .s{color:#e6db74}.code .f{color:var(--g)}
 footer{padding:50px 20px 40px;color:var(--dim);font-size:12px;text-align:center}
@@ -98,17 +109,18 @@ html[lang="en"] [data-l="en"],html[lang="pt"] [data-l="pt"]{display:revert}
       <img class="av" src="https://github.com/jpereira.png?size=260" alt="Jorge Pereira">
       <div>
         <h1>Jorge Pereira</h1>
+        <p class="sub"><span data-l="en">Senior technologist · 25+ years · Linux embedded, Wi-Fi, Digital TV</span><span data-l="pt">Senior technologist · 25+ anos · Linux embarcado, Wi-Fi, TV Digital</span></p>
         <div class="prompt"><b>$</b> whoami<br>
-          <span data-l="en">Open source dev @ <a href="https://networkradius.com/">NetworkRADIUS</a> ·
-            <a href="https://github.com/FreeRADIUS/">FreeRADIUS</a> contributor · also into AI.</span>
-          <span data-l="pt">Dev open source @ <a href="https://networkradius.com/">NetworkRADIUS</a> ·
-            contribuidor do <a href="https://github.com/FreeRADIUS/">FreeRADIUS</a> · e também com IA.</span>
+          <span data-l="en">Open source dev @ <a target="_blank" rel="noopener noreferrer" href="https://networkradius.com/">NetworkRADIUS</a> ·
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/FreeRADIUS/">FreeRADIUS</a> contributor · also into AI.</span>
+          <span data-l="pt">Dev open source @ <a target="_blank" rel="noopener noreferrer" href="https://networkradius.com/">NetworkRADIUS</a> ·
+            contribuidor do <a target="_blank" rel="noopener noreferrer" href="https://github.com/FreeRADIUS/">FreeRADIUS</a> · e também com IA.</span>
           <span class="cur"></span>
         </div>
-        <div class="tags"><span>C</span><span>RADIUS</span><span>DHCP</span><span>GRE</span><span>802.1X/EAP</span><span>AI / LLMs</span><span>security</span><span>blockchain</span></div>
+        <div class="tags"><span>C/C++</span><span>RADIUS</span><span>IPv6</span><span>Embedded Linux</span><span>Digital TV</span><span>DevOps</span><span>Lua</span><span>Perl</span><span>AI / LLMs</span><span>security</span><span>blockchain</span></div>
         <div class="cta">
-          <a href="https://github.com/jpereira">GitHub</a>
-          <a href="https://github.com/FreeRADIUS/freeradius-server/commits?author=jpereira">FreeRADIUS commits</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira">GitHub</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jpereiran/">LinkedIn</a>
         </div>
       </div>
     </div>
@@ -118,21 +130,33 @@ html[lang="en"] [data-l="en"],html[lang="pt"] [data-l="pt"]{display:revert}
 <section>
   <h2 data-l="en">what I do</h2><h2 data-l="pt">o que eu faço</h2>
   <ul class="do" data-l="en">
-    <li>Networking and protocols: RADIUS, DHCP, GRE, 802.1X/EAP</li>
-    <li>C libraries and modules (nginx, Apache, kqueue, parsers)</li>
-    <li>Security: SQL injection detection, authentication</li>
-    <li>Automation, bots and personal tools (Node.js, PHP, Python, Shell)</li>
-    <li>AI: LLMs, AI agents and AI-assisted dev workflows (Claude Code, Codex, prompts, automation)</li>
+    <li>Leadership: technical lead, software development lead, team coordinator and principal engineer</li>
+    <li>Networking: RADIUS, DHCP, GRE, IPv6, 802.1X/EAP, captive portals</li>
+    <li>Embedded: Linux (OpenWrt, uClinux), ARM/MIPS, PIC, Raspberry Pi</li>
+    <li>Digital TV (DTV): ISDB standards, hardware/software and codecs</li>
+    <li>C/C++ libs and modules (nginx, Apache, kqueue, parsers)</li>
+    <li>Security: SQL injection detection, authentication, cryptography</li>
+    <li>DevOps: Docker, Vagrant, AWS, vSphere</li>
+    <li>Automation and tools: Node.js, PHP, Python, Lua, Perl, Shell</li>
+    <li>AI: LLMs, agents and AI-assisted dev (Claude Code, Codex)</li>
+    <li>Open source: FreeRADIUS today, GNOME in the past (GTK/GLib, <b>gtk-vnc</b>), plus many other projects on my <a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira">GitHub</a></li>
     <li>Off-keyboard: climbing 🧗, downhill MTB 🚵, lifting 🏋️ — from Rio de Janeiro 🇧🇷</li>
   </ul>
   <ul class="do" data-l="pt">
-    <li>Redes e protocolos: RADIUS, DHCP, GRE, 802.1X/EAP</li>
-    <li>Libs e módulos em C (nginx, Apache, kqueue, parsers)</li>
-    <li>Segurança: detecção de SQL injection, autenticação</li>
-    <li>Automação, bots e ferramentas pessoais (Node.js, PHP, Python, Shell)</li>
-    <li>IA: LLMs, agentes de IA e fluxos de dev assistidos por IA (Claude Code, Codex, prompts, automação)</li>
+    <li>Liderança: tech lead, líder de desenvolvimento de software, coordenador de equipe e principal engineer</li>
+    <li>Redes: RADIUS, DHCP, GRE, IPv6, 802.1X/EAP, captive portals</li>
+    <li>Embarcados: Linux (OpenWrt, uClinux), ARM/MIPS, PIC, Raspberry Pi</li>
+    <li>TV Digital (DTV): padrões ISDB, hardware/software e codecs</li>
+    <li>Libs e módulos em C/C++ (nginx, Apache, kqueue, parsers)</li>
+    <li>Segurança: detecção de SQL injection, autenticação, criptografia</li>
+    <li>DevOps: Docker, Vagrant, AWS, vSphere</li>
+    <li>Automação e ferramentas: Node.js, PHP, Python, Lua, Perl, Shell</li>
+    <li>IA: LLMs, agentes e dev assistido por IA (Claude Code, Codex)</li>
+    <li>Open source: FreeRADIUS hoje, GNOME no passado (GTK/GLib, <b>gtk-vnc</b>) e vários outros projetos no meu <a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira">GitHub</a></li>
     <li>Fora do teclado: escalada 🧗, downhill 🚵, musculação 🏋️ — direto do Rio de Janeiro 🇧🇷</li>
   </ul>
+  <p data-l="en">In the tech world since 1996. The full story is on my <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jpereiran/">LinkedIn</a>.</p>
+  <p data-l="pt">No mundo da tecnologia desde 1996. A história completa está no meu <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jpereiran/">LinkedIn</a>.</p>
 </section>
 
 <section>
@@ -140,128 +164,137 @@ html[lang="en"] [data-l="en"],html[lang="pt"] [data-l="pt"]{display:revert}
   <div class="grid">
 <!-- PROJECTS:START -->
     <div class="card feat">
-      <h3><a href="https://github.com/jpereira/softgre">softgre</a><span class="badge star">featured</span></h3>
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/softgre">softgre</a><span class="badge star">featured</span></h3>
       <p>🌐 Dynamic GRE Encapsulation, (a.k.a SoftGRE)</p>
-      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 6</span><span>⑂ 9</span><span class="ico"><a href="https://jpereira.github.io/softgre/" title="Website" aria-label="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></a><a href="https://github.com/jpereira/softgre" title="GitHub repo" aria-label="GitHub repo"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a></span></div>
+      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 6</span><span>⑂ 9</span><span class="ico"><a target="_blank" rel="noopener noreferrer" href="https://jpereira.github.io/softgre/" title="Website" aria-label="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></a><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/softgre" title="GitHub repo" aria-label="GitHub repo"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a></span></div>
     </div>
     <div class="card feat">
-      <h3><a href="https://github.com/jpereira/getright">getright</a><span class="badge star">featured</span></h3>
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/zapbot">zapbot</a><span class="badge star">featured</span></h3>
+      <p>🇧🇷🤖 Bot para WhatsApp escrito em Node.js que roda em cima de uma sessão real do WhatsApp Web</p>
+      <div class="meta"><span><i class="dot" style="--lc:#f1e05a"></i>JavaScript</span><span>★ 2</span><span>⑂ 2</span><span class="ico"><a target="_blank" rel="noopener noreferrer" href="https://jpereira.github.io/zapbot/" title="Website" aria-label="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></a><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/zapbot" title="GitHub repo" aria-label="GitHub repo"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a></span></div>
+    </div>
+    <div class="card feat">
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/getright">getright</a><span class="badge star">featured</span></h3>
       <p>📥 The classic GetRight download manager, straight from the good old Windows days and brought into the modern era! Just for fun!</p>
-      <div class="meta"><span><i class="dot" style="--lc:#f34b7d"></i>C++</span><span>★ 2</span><span>⑂ 0</span><span class="ico"><a href="https://jpereira.github.io/getright/" title="Website" aria-label="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></a><a href="https://github.com/jpereira/getright" title="GitHub repo" aria-label="GitHub repo"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a></span></div>
+      <div class="meta"><span><i class="dot" style="--lc:#f34b7d"></i>C++</span><span>★ 2</span><span>⑂ 0</span><span class="ico"><a target="_blank" rel="noopener noreferrer" href="https://jpereira.github.io/getright/" title="Website" aria-label="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></a><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/getright" title="GitHub repo" aria-label="GitHub repo"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a></span></div>
     </div>
     <div class="card feat">
-      <h3><a href="https://github.com/jpereira/closedcaption-parser">closedcaption-parser</a><span class="badge star">featured</span></h3>
-      <p>🔌 Biblioteca em C para extrair o closed caption (legenda oculta) do padrão ISDB-Tb/SBTVD (ARIB STD-B24 / ABNT NBR 15606-1) a partir dos pacotes PES de legenda de um MPEG-TS</p>
-      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 0</span><span>⑂ 0</span><span class="ico"><a href="https://jpereira.github.io/closedcaption-parser/" title="Website" aria-label="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></a><a href="https://github.com/jpereira/closedcaption-parser" title="GitHub repo" aria-label="GitHub repo"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a></span></div>
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/libclosedcaption">libclosedcaption</a><span class="badge star">featured</span></h3>
+      <p>🇧🇷🔌 Biblioteca em C para extrair o closed caption (legenda oculta) do padrão ISDB-Tb/SBTVD (ARIB STD-B24 / ABNT NBR 15606-1) a partir dos pacotes PES de legenda de um MPEG-TS</p>
+      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 0</span><span>⑂ 0</span><span class="ico"><a target="_blank" rel="noopener noreferrer" href="https://jpereira.github.io/libclosedcaption/" title="Website" aria-label="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></a><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/libclosedcaption" title="GitHub repo" aria-label="GitHub repo"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a></span></div>
     </div>
-    <div class="card">
-      <h3><a href="https://github.com/jpereira/php-dhcpdleases">php-dhcpdleases</a></h3>
-      <p>this a class used to process the fields of dhcpd.leases from ISC-DHCP</p>
+    <div class="card feat">
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/php-dhcpdleases">php-dhcpdleases</a><span class="badge star">featured</span></h3>
+      <p>🔌 PHP parser for ISC DHCP dhcpd.leases files. Reads the leases, then filters, sorts and de-duplicates them, returning an array or JSON.</p>
       <div class="meta"><span><i class="dot" style="--lc:#4F5D95"></i>PHP</span><span>★ 6</span><span>⑂ 2</span></div>
     </div>
-    <div class="card">
-      <h3><a href="https://github.com/jpereira/nginx-backtrace-ng">nginx-backtrace-ng</a></h3>
-      <p>A Nginx module to dump backtrace when a worker process exits abnormally</p>
-      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 3</span><span>⑂ 6</span></div>
-    </div>
-    <div class="card">
-      <h3><a href="https://github.com/jpereira/zapbot">zapbot</a></h3>
-      <p>🤖 Bot para WhatsApp escrito em Node.js que roda em cima de uma sessão real do WhatsApp Web</p>
-      <div class="meta"><span><i class="dot" style="--lc:#f1e05a"></i>JavaScript</span><span>★ 2</span><span>⑂ 2</span><span class="ico"><a href="https://jpereira.github.io/zapbot/" title="Website" aria-label="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></a><a href="https://github.com/jpereira/zapbot" title="GitHub repo" aria-label="GitHub repo"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a></span></div>
-    </div>
-    <div class="card">
-      <h3><a href="https://github.com/jpereira/dotfiles">dotfiles</a></h3>
-      <p>🛠️ My such .dot settings base for my 🐧Linux and Mac stations!</p>
-      <div class="meta"><span><i class="dot" style="--lc:#199f4b"></i>Vim Script</span><span>★ 2</span><span>⑂ 0</span></div>
-    </div>
-    <div class="card">
-      <h3><a href="https://github.com/jpereira/isc-dhp-relay">isc-dhp-relay</a></h3>
-      <p>this is upstream of &quot;dhcp-4.3.1/relay&quot; from &quot;ftp://ftp.isc.org/isc/dhcp/4.3.1/dhcp-4.3.1.tar.gz&quot; with support for dhcp option82 using circuit_id/remote_id</p>
-      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 2</span><span>⑂ 3</span></div>
-    </div>
-    <div class="card">
-      <h3><a href="https://github.com/jpereira/hostapd">hostapd</a></h3>
-      <p>hostapd: IEEE 802.11 AP, IEEE 802.1X/WPA/WPA2/EAP/RADIUS Authenticator (fork from http://w1.fi/hostap.git)</p>
-      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 1</span><span>⑂ 3</span></div>
-    </div>
-    <div class="card">
-      <h3><a href="https://github.com/jpereira/hostap-eap-fast">hostap-eap-fast</a></h3>
-      <p>Dockerfile sample describing the issue in EAP-FAST Hostap/HEAD &amp; Radius/v3.0.x</p>
-      <div class="meta"><span><i class="dot" style="--lc:#888"></i>Dockerfile</span><span>★ 0</span><span>⑂ 0</span></div>
-    </div>
-    <div class="card">
-      <h3><a href="https://github.com/jpereira/freeradius-server">freeradius-server</a><span class="badge">fork</span></h3>
+    <div class="card feat">
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/freeradius-server">freeradius-server</a><span class="badge star">featured</span><span class="badge">fork</span></h3>
       <p>The FreeRADIUS Server.  RADIUS, DHCP, and VMPS.</p>
       <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 2</span><span>⑂ 1</span></div>
     </div>
     <div class="card">
-      <h3><a href="https://github.com/jpereira/pam_radius">pam_radius</a><span class="badge">fork</span></h3>
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/nginx-backtrace-ng">nginx-backtrace-ng</a></h3>
+      <p>A Nginx module to dump backtrace when a worker process exits abnormally</p>
+      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 3</span><span>⑂ 6</span></div>
+    </div>
+    <div class="card">
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/dotfiles">dotfiles</a></h3>
+      <p>🛠️ My such .dot settings base for my 🐧Linux and Mac stations!</p>
+      <div class="meta"><span><i class="dot" style="--lc:#199f4b"></i>Vim Script</span><span>★ 2</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/isc-dhp-relay">isc-dhp-relay</a></h3>
+      <p>this is upstream of &quot;dhcp-4.3.1/relay&quot; from &quot;ftp://ftp.isc.org/isc/dhcp/4.3.1/dhcp-4.3.1.tar.gz&quot; with support for dhcp option82 using circuit_id/remote_id</p>
+      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 2</span><span>⑂ 3</span></div>
+    </div>
+    <div class="card">
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/hostapd">hostapd</a></h3>
+      <p>hostapd: IEEE 802.11 AP, IEEE 802.1X/WPA/WPA2/EAP/RADIUS Authenticator (fork from http://w1.fi/hostap.git)</p>
+      <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 1</span><span>⑂ 3</span></div>
+    </div>
+    <div class="card">
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/hostap-eap-fast">hostap-eap-fast</a></h3>
+      <p>Dockerfile sample describing the issue in EAP-FAST Hostap/HEAD &amp; Radius/v3.0.x</p>
+      <div class="meta"><span><i class="dot" style="--lc:#888"></i>Dockerfile</span><span>★ 0</span><span>⑂ 0</span></div>
+    </div>
+    <div class="card">
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/pam_radius">pam_radius</a><span class="badge">fork</span></h3>
       <p>This is the PAM to RADIUS authentication module.  It allows any Linux, OSX or Solaris machine to become a RADIUS client for authentication and password change requests.</p>
       <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 1</span><span>⑂ 0</span></div>
     </div>
     <div class="card">
-      <h3><a href="https://github.com/jpereira/BitcoinChecker">BitcoinChecker</a><span class="badge">fork</span></h3>
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/BitcoinChecker">BitcoinChecker</a><span class="badge">fork</span></h3>
       <p>DataModule for Bitcoin Checker android app</p>
       <div class="meta"><span><i class="dot" style="--lc:#A97BFF"></i>Kotlin</span><span>★ 1</span><span>⑂ 0</span></div>
     </div>
     <div class="card">
-      <h3><a href="https://github.com/jpereira/libinjection">libinjection</a><span class="badge">fork</span></h3>
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/libinjection">libinjection</a><span class="badge">fork</span></h3>
       <p>SQL / SQLI tokenizer parser analyzer</p>
       <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 0</span><span>⑂ 0</span></div>
     </div>
     <div class="card">
-      <h3><a href="https://github.com/jpereira/freeradius-client">freeradius-client</a><span class="badge">fork</span></h3>
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/freeradius-client">freeradius-client</a><span class="badge">fork</span></h3>
       <p>A BSD licenced RADIUS client library</p>
       <div class="meta"><span><i class="dot" style="--lc:#89e051"></i>Shell</span><span>★ 0</span><span>⑂ 0</span></div>
     </div>
     <div class="card">
-      <h3><a href="https://github.com/jpereira/libkqueue">libkqueue</a><span class="badge">fork</span></h3>
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/libkqueue">libkqueue</a><span class="badge">fork</span></h3>
       <p>kqueue(2) compatibility library</p>
       <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 0</span><span>⑂ 0</span></div>
     </div>
     <div class="card">
-      <h3><a href="https://github.com/jpereira/radsecproxy">radsecproxy</a><span class="badge">fork</span></h3>
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/radsecproxy">radsecproxy</a><span class="badge">fork</span></h3>
       <p>radsecproxy is a generic RADIUS proxy that supports both UDP and TLS (RadSec) RADIUS transports.</p>
       <div class="meta"><span>★ 0</span><span>⑂ 0</span></div>
     </div>
     <div class="card">
-      <h3><a href="https://github.com/jpereira/luarcu">luarcu</a><span class="badge">fork</span></h3>
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/luarcu">luarcu</a><span class="badge">fork</span></h3>
       <p>RCU binding for Lunatik</p>
       <div class="meta"><span>★ 0</span><span>⑂ 0</span></div>
     </div>
     <div class="card">
-      <h3><a href="https://github.com/jpereira/MonitorControl">MonitorControl</a><span class="badge">fork</span></h3>
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/MonitorControl">MonitorControl</a><span class="badge">fork</span></h3>
       <p>🖥  Control your external monitor brightness &amp; volume on your Mac</p>
       <div class="meta"><span><i class="dot" style="--lc:#888"></i>Swift</span><span>★ 0</span><span>⑂ 0</span></div>
     </div>
     <div class="card">
-      <h3><a href="https://github.com/jpereira/packer-provisioner-windows-update">packer-provisioner-windows-update</a><span class="badge">fork</span></h3>
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/packer-provisioner-windows-update">packer-provisioner-windows-update</a><span class="badge">fork</span></h3>
       <p>Packer plugin for installing Windows updates</p>
       <div class="meta"><span><i class="dot" style="--lc:#888"></i>PowerShell</span><span>★ 0</span><span>⑂ 0</span></div>
     </div>
     <div class="card">
-      <h3><a href="https://github.com/jpereira/windows-domain-controller-vagrant">windows-domain-controller-vagrant</a><span class="badge">fork</span></h3>
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/windows-domain-controller-vagrant">windows-domain-controller-vagrant</a><span class="badge">fork</span></h3>
       <p>Example Windows Domain Controller</p>
       <div class="meta"><span>★ 0</span><span>⑂ 0</span></div>
     </div>
     <div class="card">
-      <h3><a href="https://github.com/jpereira/yubikey-val">yubikey-val</a><span class="badge">fork</span></h3>
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/yubikey-val">yubikey-val</a><span class="badge">fork</span></h3>
       <p>YubiKey OTP validation server in PHP</p>
       <div class="meta"><span>★ 0</span><span>⑂ 0</span></div>
     </div>
     <div class="card">
-      <h3><a href="https://github.com/jpereira/luasocket">luasocket</a><span class="badge">fork</span></h3>
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/luasocket">luasocket</a><span class="badge">fork</span></h3>
       <p>Mirrored from https://github.com/diegonehab/luasocket</p>
       <div class="meta"><span>★ 0</span><span>⑂ 0</span></div>
     </div>
     <div class="card">
-      <h3><a href="https://github.com/jpereira/mod_auth_radius">mod_auth_radius</a><span class="badge">fork</span></h3>
+      <h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/mod_auth_radius">mod_auth_radius</a><span class="badge">fork</span></h3>
       <p>The FreeRADIUS Apache module for RADIUS authentication</p>
       <div class="meta"><span><i class="dot" style="--lc:#555555"></i>C</span><span>★ 0</span><span>⑂ 0</span></div>
     </div>
 <!-- PROJECTS:END -->
   </div>
-  <p class="upd"><small><span data-l="en">auto-updated from the GitHub API</span><span data-l="pt">atualizado automaticamente via API do GitHub</span> · <!-- UPDATED -->2026-10-15<!-- /UPDATED --></small></p>
+  <p class="upd"><small><span data-l="en">auto-updated from the GitHub API</span><span data-l="pt">atualizado automaticamente via API do GitHub</span> · <!-- UPDATED -->2026-10-16<!-- /UPDATED --></small></p>
+</section>
+
+<section>
+  <h2 data-l="en">contributions</h2><h2 data-l="pt">contribuições</h2>
+  <div class="links">
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/FreeRADIUS/freeradius-server/commits?author=jpereira">FreeRADIUS · commits</a>
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/FreeRADIUS/freeradius-server/pulls?q=author%3Ajpereira">FreeRADIUS · pull requests</a>
+    <a target="_blank" rel="noopener noreferrer" href="https://gitlab.gnome.org/GNOME/gtk-vnc">GNOME · gtk-vnc</a>
+  </div>
 </section>
 
 <section>
@@ -276,7 +309,7 @@ html[lang="en"] [data-l="en"],html[lang="pt"] [data-l="pt"]{display:revert}
 <footer>
   <span data-l="en">Built with plain HTML, no frameworks. Source on</span>
   <span data-l="pt">Feito com HTML puro, sem frameworks. Código no</span>
-  <a href="https://github.com/jpereira/jpereira.github.io">GitHub</a>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/jpereira/jpereira.github.io">GitHub</a>
 </footer>
 
 <script>
